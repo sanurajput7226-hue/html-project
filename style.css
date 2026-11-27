@@ -1,0 +1,68 @@
+/* Basic page style */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f2f4f7;
+  color: #222;
+}
+
+header {
+  background: #1f3a5f;
+  color: white;
+  padding: 15px 25px;
+}
+
+h1 { margin: 0; font-size: 22px; }
+
+section {
+  background: white;
+  margin: 20px;
+  padding: 15px 20px;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  overflow-x: auto;
+}
+
+h2 { margin-top: 0; color: #1f3a5f; font-size: 18px; }
+
+/* Summary cards */
+.cards { display: flex; gap: 15px; flex-wrap: wrap; }
+.card {
+  flex: 1;
+  min-width: 130px;
+  background: #e8eaed;
+  padding: 15px;
+  text-align: center;
+  border-radius: 6px;
+}
+.card span { font-size: 32px; font-weight: bold; }
+.card p { margin: 5px 0 0; }
+.card.blue  { background: #d6e8ff; }
+.card.red   { background: #ffd6d6; }
+.card.green { background: #d6f5dc; }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #ccc; padding: 8px; text-align: left; font-size: 14px; }
+th { background: #1f3a5f; color: white; }
+
+/* Form */
+.form { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+input, select, button { padding: 7px; font-size: 14px; }
+button {
+  background: #1f3a5f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover { background: #2d5389; }
+
+/* Progress bar */
+.bar { background: #ddd; border-radius: 4px; width: 110px; height: 14px; }
+.bar div { background: #2e9e4f; height: 14px; border-radius: 4px; }
+
+/* Status colours */
+.good    { color: green;   font-weight: bold; }
+.warning { color: orange;  font-weight: bold; }
+.bad     { color: red;     font-weight: bold; }

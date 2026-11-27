@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Production Planning System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Manufacturing Production Planning System</h1>
+  </header>
+
+  <!-- 1. DASHBOARD SUMMARY -->
+  <section>
+    <h2>Dashboard</h2>
+    <div class="cards">
+      <div class="card"><span id="totalOrders">0</span><p>Total Orders</p></div>
+      <div class="card blue"><span id="runningOrders">0</span><p>In Progress</p></div>
+      <div class="card red"><span id="delayedOrders">0</span><p>Delayed</p></div>
+      <div class="card green"><span id="completedOrders">0</span><p>Completed</p></div>
+    </div>
+  </section>
+
+  <!-- 2. PRODUCT DETAILS -->
+  <section>
+    <h2>Product Details</h2>
+    <table>
+      <thead>
+        <tr><th>Product</th><th>Raw Material</th><th>Material per Unit</th><th>Stages</th></tr>
+      </thead>
+      <tbody id="productTable"></tbody>
+    </table>
+  </section>
+
+  <!-- 3. ADD NEW ORDER -->
+  <section>
+    <h2>Add Production Order</h2>
+    <div class="form">
+      <select id="product"></select>
+      <input type="number" id="qty" placeholder="Quantity" min="1">
+      <label>Start: <input type="date" id="start"></label>
+      <label>Due: <input type="date" id="due"></label>
+      <select id="machine"></select>
+      <button onclick="addOrder()">Add Order</button>
+    </div>
+  </section>
+
+  <!-- 4. PRODUCTION ORDERS, SCHEDULE, STAGES AND PROGRESS -->
+  <section>
+    <h2>Production Orders, Schedule and Progress</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Order ID</th><th>Product</th><th>Qty</th>
+          <th>Start</th><th>Due</th><th>Machine</th>
+          <th>Current Stage</th><th>Progress</th><th>Status</th><th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="orderTable"></tbody>
+    </table>
+  </section>
+
+  <!-- 5. MACHINE ALLOCATION -->
+  <section>
+    <h2>Machine Allocation</h2>
+    <table>
+      <thead>
+        <tr><th>Machine</th><th>Status</th><th>Assigned Order</th></tr>
+      </thead>
+      <tbody id="machineTable"></tbody>
+    </table>
+  </section>
+
+  <!-- 6. MATERIAL STATUS -->
+  <section>
+    <h2>Material Status</h2>
+    <table>
+      <thead>
+        <tr><th>Material</th><th>In Stock</th><th>Required (pending orders)</th><th>Status</th></tr>
+      </thead>
+      <tbody id="materialTable"></tbody>
+    </table>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
